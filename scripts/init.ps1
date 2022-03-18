@@ -62,6 +62,12 @@ function Install-ShaderConductor {
     # exit ShaderConductor directory
     Pop-Location
 
+    # make folder just in case
+    if(-not(Test-Path -Path $currentDirectory\halley\bin)){
+        Push-Location halley
+        mkdir bin
+        Pop-Location
+    }
 
     Copy-Item $currentDirectory\ShaderConductor\Build\ninja-win-$vsVersion-x64-Release\Bin\ShaderConductor.dll -Destination $currentDirectory\halley\bin\
     Copy-Item $currentDirectory\ShaderConductor\Build\ninja-win-$vsVersion-x64-Release\Bin\dxcompiler.dll -Destination $currentDirectory\halley\bin\
