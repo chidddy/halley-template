@@ -86,3 +86,5 @@ i cannot recommend using the cmake extension for vscode as i've had issues with 
 **reminder after doing anything in gen_src you'll need to build the project again**
 
 **reminder to update source files in CMakeLists.txt whenever adding new files**
+
+**this will fail to compile the halley-launcher, i have not bothered to figure out why yet although i assume if you build it manually after the assets are imported it will work**

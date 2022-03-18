@@ -49,7 +49,7 @@ Get-Content "vcvars.txt" | Foreach-Object {
 cmake -G "Ninja" -DCMAKE_BUILD_TYPE="$build_type" ..
 
 
-Copy-Item $currentDirectory\build\vcpkg_installed\x64-windows\bin\SDL2.dll -Destination $currentDirectory\halley\bin
+Copy-Item $currentDirectory\build\vcpkg_installed\x64-windows\bin\SDL2.dll -Destination $currentDirectory\halley\bin\
 
 # exit build directory
 Pop-Location

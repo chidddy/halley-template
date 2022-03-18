@@ -63,8 +63,8 @@ function Install-ShaderConductor {
     Pop-Location
 
 
-    Copy-Item $currentDirectory\ShaderConductor\Build\ninja-win-$vsVersion-x64-Release\Bin\ShaderConductor.dll -Destination $currentDirectory\halley\bin
-    Copy-Item $currentDirectory\ShaderConductor\Build\ninja-win-$vsVersion-x64-Release\Bin\dxcompiler.dll -Destination $currentDirectory\halley\bin
+    Copy-Item $currentDirectory\ShaderConductor\Build\ninja-win-$vsVersion-x64-Release\Bin\ShaderConductor.dll -Destination $currentDirectory\halley\bin\
+    Copy-Item $currentDirectory\ShaderConductor\Build\ninja-win-$vsVersion-x64-Release\Bin\dxcompiler.dll -Destination $currentDirectory\halley\bin\
 
 
     Write-Host "ShaderConductor built"
