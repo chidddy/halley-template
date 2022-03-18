@@ -3,6 +3,8 @@
 An attempt at making a simple halley template based on the one provided in the repo
 with simple instructions to get it running
 
+the intended use of this repository is to fork it or clone it and change the remotes and begin developing your game
+
 **please note that while this is for windows only right now the only thing that needs to be made are scripts for linux/mac, i'm not at home im on a windows laptop so when i am home i will add those**
 
 ## dependencies
