@@ -1,0 +1,9 @@
+[submodule "halley"]
+	path = halley
+	url = git@github.com:chidddy/halley.git
+[submodule "vcpkg"]
+	path = vcpkg
+	url = https://github.com/microsoft/vcpkg.git
+[submodule "ShaderConductor"]
+	path = ShaderConductor
+	url = https://github.com/emileet/ShaderConductor.git

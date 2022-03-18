@@ -1,0 +1,35 @@
+{
+    "$schema": "https://raw.githubusercontent.com/microsoft/vcpkg/master/scripts/vcpkg.schema.json",
+    "name": "halley-template",
+    "version-string": "0.1.0",
+    "dependencies": [
+      {
+        "name": "boost",
+        "platform": "x64"
+      },
+      {
+        "name": "freetype",
+        "platform": "x64"
+      },
+      {
+        "name": "libogg",
+        "platform": "x64"
+      },
+      {
+        "name": "libvorbis",
+        "platform": "x64"
+      },
+      {
+        "name": "gtest",
+        "platform": "x64"
+      },
+      {
+        "name": "lua",
+        "platform": "x64"
+      },
+      {
+        "name": "sdl2",
+        "platform": "x64"
+      }
+    ]
+  }
