@@ -1,6 +1,7 @@
 cmake_minimum_required (VERSION 3.10)
 
 # setup VCPKG
+set(VCPKG_INSTALLED_DIR ${CMAKE_CURRENT_SOURCE_DIR}/vcpkg_installed CACHE STRING "vcpkg install directory")
 set(CMAKE_TOOLCHAIN_FILE ${CMAKE_CURRENT_SOURCE_DIR}/vcpkg/scripts/buildsystems/vcpkg.cmake CACHE STRING "Vcpkg toolchain file")
 
 # halley engine path
@@ -16,9 +17,9 @@ set(BUILD_HALLEY_TOOLS 1)
 set(BUILD_HALLEY_LAUNCHER 1)
 set(BUILD_HALLEY_TESTS 0)
 set(HALLEY_PROJECT_EMBED 1)
-set(HOTRELOAD 0 CACHE BOOL "Sets whether to hot-reload this project")
+set(HOTRELOAD 1 CACHE BOOL "Sets whether to hot-reload this project")
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${HALLEY_PATH}/cmake/")
-
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 project (halleyGame)
 
 include(HalleyProject)

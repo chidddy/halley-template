@@ -66,7 +66,7 @@ i cannot recommend using the cmake extension for vscode as i've had issues with 
             "includePath": [
                 "${workspaceFolder}/halley/include/",
                 "${workspaceFolder}/halley/src/engine/**",
-                "${workspaceFolder}/build/vcpkg_installed/x64-windows/include/**"
+                "${workspaceFolder}/vcpkg_installed/x64-windows/include/**"
             ],
             "intelliSenseMode": "windows-msvc-x64",
             "cStandard": "c17",

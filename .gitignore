@@ -20,5 +20,7 @@ macos_bin/
 linux_bin/
 res/*.aps
 .vs/
+vcpkg_installed
+vcvars.txt
 src/build_version.h
 vsconfig

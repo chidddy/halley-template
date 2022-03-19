@@ -14,7 +14,7 @@ Pop-Location
 
 Push-Location build
 
-ninja halleyGame
 ninja halleyGame-dll
+ninja halleyGame
 
 Pop-Location

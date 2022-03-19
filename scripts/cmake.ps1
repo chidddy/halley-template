@@ -39,17 +39,21 @@ $vcVars = switch($vsVersion) {
     "vc140" {"14.0"}
 }
 
-cmd.exe /c "call `"$vsDir\VC\Auxiliary\Build\vcvars64.bat`" --vcvars_ver=$vcVars && set > vcvars.txt"
-Get-Content "vcvars.txt" | Foreach-Object {
+if(-not(Test-Path env:DevEnvDir)) {
+    cmd.exe /c "call `"$vsDir\VC\Auxiliary\Build\vcvars64.bat`" --vcvars_ver=$vcVars && set > ..\vcvars.txt"
+}
+Get-Content $currentDirectory\vcvars.txt | Foreach-Object {
     if ($_ -match "^(.*?)=(.*)$") {
         Set-Content "env:\$($matches[1])" $matches[2]
     }
 }
 
+Copy-Item $currentDirectory\vcvars.txt -Destination "vcvars.txt"
+
 cmake -G "Ninja" -DCMAKE_BUILD_TYPE="$build_type" ..
 
 
-Copy-Item $currentDirectory\build\vcpkg_installed\x64-windows\bin\SDL2.dll -Destination $currentDirectory\halley\bin\
+Copy-Item $currentDirectory\vcpkg_installed\x64-windows\bin\SDL2.dll -Destination $currentDirectory\halley\bin\
 
 # exit build directory
 Pop-Location
