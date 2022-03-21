@@ -8,8 +8,9 @@ set(CMAKE_TOOLCHAIN_FILE ${CMAKE_CURRENT_SOURCE_DIR}/vcpkg/scripts/buildsystems/
 set(HALLEY_PATH ${CMAKE_CURRENT_SOURCE_DIR}/halley CACHE STRING "Path to Halley root")
 
 # setup ShaderConductor
+file(READ ${CMAKE_CURRENT_SOURCE_DIR}/vsconfig VSVER)
 set(ShaderConductor_INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/ShaderConductor/Include CACHE STRING "Path to ShaderConstructor Include dir")
-set(ShaderConductor_LIBRARY ${CMAKE_CURRENT_SOURCE_DIR}/ShaderConductor/Build/ninja-win-vc143-x64-Release/lib/ShaderConductor.lib CACHE STRING "Path to ShaderConstructor Lib dir")
+set(ShaderConductor_LIBRARY ${CMAKE_CURRENT_SOURCE_DIR}/ShaderConductor/Build/ninja-win-${VSVER}-x64-Release/lib/ShaderConductor.lib CACHE STRING "Path to ShaderConstructor Lib dir")
 
 # setup compile settings
 set(Boost_USE_STATIC_LIBS 1)
